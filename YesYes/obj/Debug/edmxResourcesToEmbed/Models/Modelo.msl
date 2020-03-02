@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="universityModelStoreContainer" CdmEntityContainer="universityEntities">
+    <EntitySetMapping Name="ALUMNOes">
+      <EntityTypeMapping TypeName="universityModel.ALUMNO">
+        <MappingFragment StoreEntitySet="ALUMNO">
+          <ScalarProperty Name="boleta" ColumnName="boleta" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="CURP" ColumnName="CURP" />
+          <ScalarProperty Name="fechaNac" ColumnName="fechaNac" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Docentes">
+      <EntityTypeMapping TypeName="universityModel.Docente">
+        <MappingFragment StoreEntitySet="Docente">
+          <ScalarProperty Name="IDempleado" ColumnName="IDempleado" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Maestrias">
+      <EntityTypeMapping TypeName="universityModel.Maestria">
+        <MappingFragment StoreEntitySet="Maestria">
+          <ScalarProperty Name="IDmaestria" ColumnName="IDmaestria" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="duracion" ColumnName="duracion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Universidads">
+      <EntityTypeMapping TypeName="universityModel.Universidad">
+        <MappingFragment StoreEntitySet="Universidad">
+          <ScalarProperty Name="IDuniversidad" ColumnName="IDuniversidad" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

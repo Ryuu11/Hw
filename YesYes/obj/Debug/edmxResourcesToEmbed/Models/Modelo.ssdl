@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="universityModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ALUMNO">
+    <Key>
+      <PropertyRef Name="boleta" />
+    </Key>
+    <Property Name="boleta" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="50" />
+    <Property Name="CURP" Type="varchar" MaxLength="50" />
+    <Property Name="fechaNac" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Docente">
+    <Key>
+      <PropertyRef Name="IDempleado" />
+    </Key>
+    <Property Name="IDempleado" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="50" />
+    <Property Name="telefono" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Maestria">
+    <Key>
+      <PropertyRef Name="IDmaestria" />
+    </Key>
+    <Property Name="IDmaestria" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="50" />
+    <Property Name="duracion" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Universidad">
+    <Key>
+      <PropertyRef Name="IDuniversidad" />
+    </Key>
+    <Property Name="IDuniversidad" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="universityModelStoreContainer">
+    <EntitySet Name="ALUMNO" EntityType="Self.ALUMNO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Docente" EntityType="Self.Docente" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Maestria" EntityType="Self.Maestria" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Universidad" EntityType="Self.Universidad" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
